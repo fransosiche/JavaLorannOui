@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lorann/contract/src/main/java"/>
+	<classpathentry kind="src" path="lorann/contract/src/test/java"/>
+	<classpathentry kind="src" path="lorann/controller/src/main/java"/>
+	<classpathentry kind="src" path="lorann/main/src/main/java"/>
+	<classpathentry kind="src" path="lorann/model/src/main/java"/>
+	<classpathentry kind="src" path="lorann/showboard/src/main/java"/>
+	<classpathentry kind="src" path="lorann/view/src/main/java"/>
+	<classpathentry kind="lib" path="lorann/contract/target/contract-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/controller/target/controller-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/main/target/main-0.0.1-SNAPSHOT-shaded.jar"/>
+	<classpathentry kind="lib" path="lorann/main/target/main-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/main/target/original-main-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/model/target/model-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/showboard/target/showboard-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lorann/view/target/view-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="lorann/contract/target/classes"/>
+</classpath>
