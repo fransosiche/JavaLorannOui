@@ -1,7 +1,5 @@
 package main;
 
-import java.sql.SQLException;
-
 import controller.ControllerFacade;
 import model.ModelFacade;
 import view.ViewFacade;
@@ -15,15 +13,17 @@ import view.ViewFacade;
 public abstract class Main {
 
 	/**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     */
-    public static void main(final String[] args) {
-        System.out.println("hello");
-        System.out.println("Franso");
+	 * The main method.
+	 *
+	 * @param args
+	 *            the arguments
+	 */
+	public static void main(final String[] args) {
 
-}
-}
+		ControllerFacade controller = new ControllerFacade(null, null);
+		ViewFacade view = new ViewFacade();
+		ModelFacade model = new ModelFacade();
+		controller.addObserver(view.getFrame().getObserver());
 
+	}
+}

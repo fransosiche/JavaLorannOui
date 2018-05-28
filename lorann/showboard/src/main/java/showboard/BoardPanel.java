@@ -101,7 +101,7 @@ class BoardPanel extends JPanel implements Observer {
      * (non-Javadoc)
      * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
      */
-    @Override
+    
     public final void paintComponent(final Graphics graphics) {
 
         final Map<String, ArrayList<IPawn>> mapPawn = this.createMapPawn();
@@ -118,7 +118,7 @@ class BoardPanel extends JPanel implements Observer {
      * (non-Javadoc)
      * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
      */
-    @Override
+    
     public final void update(final Observable observable, final Object object) {
         this.repaint();
     }

@@ -2,6 +2,7 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Observable;
 
 import model.Example;
 import model.IModel;
@@ -13,7 +14,7 @@ import view.IView;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public class ControllerFacade implements IController {
+public class ControllerFacade extends  Observable implements IController{
 
     /** The view. */
     private final IView  view;

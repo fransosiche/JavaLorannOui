@@ -2,6 +2,7 @@ package model;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Observable;
 
 import model.dao.ExampleDAO;
 
@@ -11,7 +12,7 @@ import model.dao.ExampleDAO;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
-public final class ModelFacade implements IModel {
+public final class ModelFacade extends Observable implements IModel {
 
     /**
      * Instantiates a new model facade.
