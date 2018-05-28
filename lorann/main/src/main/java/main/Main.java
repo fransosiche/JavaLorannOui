@@ -22,7 +22,7 @@ public abstract class Main {
      */
     public static void main(final String[] args) {
         System.out.println("hello");
-        System.out.println("Frano");
+        System.out.println("Franso");
 
 }
 }
