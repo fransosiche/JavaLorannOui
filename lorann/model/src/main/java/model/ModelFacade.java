@@ -1,10 +1,11 @@
 package model;
 
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Observable;
 
-import model.dao.ExampleDAO;
+import model.dao.BDD;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -26,8 +27,8 @@ public final class ModelFacade extends Observable implements IModel {
      * @see model.IModel#getExampleById(int)
      */
     @Override
-    public Example getExampleById(final int id) throws SQLException {
-        return ExampleDAO.getExampleById(id);
+    public InputStream getExampleById(final int id) throws SQLException {
+        return BDD.getExampleById(id).getBinaryStream();
     }
 
     /*
@@ -36,16 +37,16 @@ public final class ModelFacade extends Observable implements IModel {
      */
     @Override
     public Example getExampleByName(final String name) throws SQLException {
-        return ExampleDAO.getExampleByName(name);
+        return BDD.getExampleByName(name);
     }
 
     /*
      * (non-Javadoc)
      * @see model.IModel#getAllExamples()
-     */
+    */ 
     @Override
     public List<Example> getAllExamples() throws SQLException {
-        return ExampleDAO.getAllExamples();
-    }
+        return BDD.getAllExamples();
+    } 
 
-}
+} 

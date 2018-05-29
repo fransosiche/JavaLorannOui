@@ -10,7 +10,7 @@ import java.sql.ResultSet;
  * @version 1.0
  */
 public abstract class AbstractDAO {
-
+	
     /**
      * Execute query.
      *
@@ -19,7 +19,7 @@ public abstract class AbstractDAO {
      * @return the result set
      */
     protected static ResultSet executeQuery(final String query) {
-        return LorannBDDConnector.getInstance().executeQuery(query);
+        return ConnectionBDD.getInstance().executeQuery(query);
     }
 
     /**
@@ -30,7 +30,7 @@ public abstract class AbstractDAO {
      * @return the int
      */
     protected static int executeUpdate(final String query) {
-        return LorannBDDConnector.getInstance().executeUpdate(query);
+        return ConnectionBDD.getInstance().executeUpdate(query);
     }
 
     /**
@@ -41,6 +41,10 @@ public abstract class AbstractDAO {
      * @return the callable statement
      */
     protected static CallableStatement prepareCall(final String query) {
-        return LorannBDDConnector.getInstance().prepareCall(query);
+        return ConnectionBDD.getInstance().prepareCall(query);
     }
+    
+   
 }
+    
+ 

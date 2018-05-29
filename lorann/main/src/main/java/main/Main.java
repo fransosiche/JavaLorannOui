@@ -1,6 +1,8 @@
 package main;
 
-import controller.ControllerFacade;
+import java.sql.SQLException;
+
+import controller.LorannController;
 import model.ModelFacade;
 import view.ViewFacade;
 
@@ -17,13 +19,19 @@ public abstract class Main {
 	 *
 	 * @param args
 	 *            the arguments
+	 * @throws SQLException 
 	 */
-	public static void main(final String[] args) {
+	public static void main(final String[] args)  {
 
-		ControllerFacade controller = new ControllerFacade(null, null);
+		LorannController controller = new LorannController(null, null);
 		ViewFacade view = new ViewFacade();
 		ModelFacade model = new ModelFacade();
 		controller.addObserver(view.getFrame().getObserver());
-
+		try {
+			controller.start();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
