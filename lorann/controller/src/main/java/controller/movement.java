@@ -1,4 +1,4 @@
-package model.movement;
+package controller;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -23,44 +23,37 @@ public class movement {
         
         this.addKeyListener(new KeyListener()
         {
-           private Object right;
 		public void keyPressed(KeyEvent e) {
 
 
               int keyCode = e.getKeyCode();
               switch( keyCode ) {
-              case KeyEvent.VK_SPACE:
+              case KeyEvent.VK_UP:
                         
-                       aPersoWidth =20;
-                       aPersoHeight =32;
-                       Position = "Saut";
+            	       aPersoY = aPersoY +3;
+                       
                     
                     
                        break;
                    case KeyEvent.VK_DOWN:
                         
                           
-                         aPersoWidth =32;
-                         aPersoHeight =16;
-                         Position = "Crawl";
+                	   aPersoY = aPersoY -3;
+                         
                          
                        break;
                    case KeyEvent.VK_LEFT:
                           
                          aPersoX = aPersoX -3;
-                         aPersoWidth =20;
-                         aPersoHeight =32;
-                         Position = "Gauche";
-                         Object Imagelink = left;
+                         
+                        
+                         
                          
                        break;
                    case KeyEvent.VK_RIGHT :
                           
                          aPersoX = aPersoX +3;
-                         aPersoWidth =20;
-                         aPersoHeight =32;
-                         Position = "Droite";
-                         Imagelink = right;
+                         
                          
                          break;
                 }
@@ -74,18 +67,19 @@ public class movement {
             
         
         });
-}
+	}
+	
 	private void addKeyListener(KeyListener keyListener) {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	private int getY() {
-		// TODO Auto-generated method stub
-		return 0;
+		// 
+		return aPersoY;
 	}
 	private int getX() {
 		// TODO Auto-generated method stub
-		return 0;
+		return aPersoX;
 	}
 }
