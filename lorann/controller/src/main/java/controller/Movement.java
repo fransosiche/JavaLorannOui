@@ -2,26 +2,43 @@ package controller;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 
+import model.Permeability;
 import model.mobil.Lorann;
 
 public class Movement extends Lorann{
-	private int aPersoWidth;
-	private int aPersoHeight;
-	private int aPersoX;
-	private int aPersoY;
 	protected Object left;
-	public Movement(){
+	private int y;
+	private int x;
+	private Boolean alive = true;
+	 Movement(final char sprite, final Road road, final Permeability permeability) {
+        super();
+        this.setRoad(road);
+    }
+	Movement(final int x, final int y, final char sprite, final Imap road, final Permeability permeability) {
+        this(sprite, road, permeability);
+        this.setX(x);
+        this.setY(y);
+    }
+	
+	
+	
+	private void setY(int y2) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setX(int x2) {
+		// TODO Auto-generated method stub
+		
+	}
+	public Movement() throws IOException{
 		super();
-		aPersoX = this.getX();
-        aPersoY = this.getY();
-        aPersoX = 30;
-        aPersoY = 300;
-        aPersoWidth=20;
-        aPersoHeight=32;
-        
+		
         this.addKeyListener(new KeyListener()
         {
+		private int x;
+		private int y;
 		public void keyPressed(KeyEvent e) {
 
 
@@ -29,27 +46,27 @@ public class Movement extends Lorann{
               switch( keyCode ) {
               		case KeyEvent.VK_UP:
                         moveUp();
-            	       aPersoY = aPersoY +3;
+                        this.setY(this.getY() + 1);
                        
                         
                        break;
                    case KeyEvent.VK_DOWN:
                        moveBack();
                           
-                	   aPersoY = aPersoY -3;
+                       this.setY(this.getY() - 1);
                          
                          
                        break;
                    case KeyEvent.VK_LEFT:
                           
-                         aPersoX = aPersoX -3;
+                	   this.setX(this.getX() - 1);
                           moveLeft();
                         
                          
                        break;
                    case KeyEvent.VK_RIGHT :
                           moveRight();
-                         aPersoX = aPersoX +3;
+                          this.setX(this.getX() + 1);
                          
                          
                          break;
@@ -59,9 +76,34 @@ public class Movement extends Lorann{
                 
            }
 
-           
+  
 
+		private void setY(int y) {
+			// TODO Auto-generated method stub
+			this.y = y;
+		}
+
+
+
+		private int getY() {
+			// TODO Auto-generated method stub
+			return this.y;
+		}
+
+
+
+
+		private void setX(int x) {
+			// TODO Auto-generated method stub
+			this.x = x;
+	        
+	    }
 		
+		private int getX() {
+			// TODO Auto-generated method stub
+			return this.x;
+		}
+
 
 
 
@@ -77,12 +119,5 @@ public class Movement extends Lorann{
 		
 	}
 
-	private int getY() {
-		// 
-		return aPersoY;
-	}
-	private int getX() {
-		// TODO Auto-generated method stub
-		return aPersoX;
-	}
+	
 }
