@@ -87,7 +87,7 @@ public class Movement extends Lorann{
 
 		private int getY() {
 			// TODO Auto-generated method stub
-			return this.y;
+			return this.Y;
 		}
 
 
